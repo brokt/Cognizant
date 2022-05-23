@@ -2,6 +2,8 @@
 /packages
 BusinessLayer/bin
 BusinessLayer/obj
+BusinessLayer.Test/bin
+BusinessLayer.Test/obj
 Core/bin
 Core/obj
 DataLayer/bin
@@ -13,3 +15,4 @@ Web/obj
 Web.Api/bin
 Web.Api/obj
 Web.Api/appsettings.Development
+
