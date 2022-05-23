@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "Context": "Server=192.168.100.111;Database=CognizantDb;User Id= cognizantApp;Password=cognizantApp;"
+  }
+}

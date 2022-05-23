@@ -1,0 +1,172 @@
+TpTrace Verbose: 0 : 38992, 1, 2022/05/22, 14:01:29.542, 7539787963259, testhost.dll, Version: 16.11.0
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.557, 7539788026040, testhost.dll, DefaultEngineInvoker.Invoke: Testhost process started with args :[--port, 64513],[--endpoint, 127.0.0.1:064513],[--role, client],[--parentprocessid, 10336],[--diag, D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\coverage-tool-output\diagnostics.host.22-05-22_14-01-29_29348_5.log],[--tracelevel, 4],[--datacollectionport, 64509],[--telemetryoptedin, false]
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.558, 7539788043555, testhost.dll, Setting up debug trace listener.
+TpTrace Verbose: 0 : 38992, 1, 2022/05/22, 14:01:29.559, 7539788053336, testhost.dll, TestPlatformTraceListener.Setup: Replacing listener 0 with TestHostTraceListener.
+TpTrace Verbose: 0 : 38992, 1, 2022/05/22, 14:01:29.560, 7539788054682, testhost.dll, TestPlatformTraceListener.Setup: Added test platform trace listener.
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.560, 7539788061931, testhost.dll, DefaultEngineInvoker.SetParentProcessExitCallback: Monitoring parent process with id: '10336'
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.575, 7539788205327, testhost.dll, DefaultEngineInvoker.GetConnectionInfo: Initialize communication on endpoint address: '127.0.0.1:064513'
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.598, 7539788436907, testhost.dll, SocketClient.Start: connecting to server endpoint: 127.0.0.1:064513
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.610, 7539788562001, testhost.dll, DefaultEngineInvoker.ConnectToDatacollector: Connecting to datacollector, port: 64509
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:29.611, 7539788573833, testhost.dll, SocketClient.OnServerConnected: connected to server endpoint: 127.0.0.1:064513
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.614, 7539788603556, testhost.dll, Connected to server, and starting MessageLoopAsync
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.616, 7539788617415, testhost.dll, Trying to connect to server on socket : 127.0.0.1:64509 
+TpTrace Verbose: 0 : 38992, 1, 2022/05/22, 14:01:29.616, 7539788623184, testhost.dll, SocketCommunicationManager : SetupClientAsync : Attempting to connect to the server.
+TpTrace Information: 0 : 38992, 9, 2022/05/22, 14:01:29.618, 7539788642957, testhost.dll, Connected to the server successfully 
+TpTrace Information: 0 : 38992, 9, 2022/05/22, 14:01:29.618, 7539788644090, testhost.dll, Using the buffer size of 16384 bytes
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.619, 7539788647503, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:29.619, 7539788649618, testhost.dll, DefaultEngineInvoker.Invoke: Start Request Processing.
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.619, 7539788653434, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 11, 2022/05/22, 14:01:29.620, 7539788658448, testhost.dll, DefaultEngineInvoker.StartProcessingAsync: Connected to vstest.console, Starting process requests.
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:29.789, 7539790353404, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (ProtocolVersion) -> 5
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.838, 7539790837853, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"Logging TestHost Diagnostics in file: D:\\MyWorks\\Assignment\\Cognizant\\Tests\\bin\\Debug\\net5.0\\fine-code-coverage\\coverage-tool-output\\diagnostics.host.22-05-22_14-01-29_29348_5.log"}}
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.838, 7539790841287, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.838, 7539790843153, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:29.846, 7539790915230, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (TestExecution.Initialize) -> [
+  "D:\\MyWorks\\Assignment\\Cognizant\\Tests\\bin\\Debug\\net5.0\\fine-code-coverage\\build-output\\xunit.runner.visualstudio.dotnetcore.testadapter.dll"
+]
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.859, 7539791045251, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.859, 7539791046828, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.859, 7539791053018, testhost.dll, TestRequestHandler.OnMessageReceived: Running job 'TestExecution.Initialize'.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.863, 7539791092806, testhost.dll, TestExecutorService: Loading the extensions
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:29.864, 7539791099098, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (TestExecution.StartWithSources) -> {
+  "AdapterSourceMap": {
+    "_none_": [
+      "D:\\MyWorks\\Assignment\\Cognizant\\Tests\\bin\\Debug\\net5.0\\fine-code-coverage\\build-output\\Tests.dll"
+    ]
+  },
+  "RunSettings": "<RunSettings>\r\n  <RunConfiguration>\r\n    <ResultsDirectory>D:\\MyWorks\\Assignment\\Cognizant\\Tests\\bin\\Debug\\net5.0\\fine-code-coverage\\coverage-tool-output</ResultsDirectory>\r\n    <TargetFrameworkVersion>.NETCoreApp,Version=v5.0</TargetFrameworkVersion>\r\n    <DesignMode>False</DesignMode>\r\n    <CollectSourceInformation>False</CollectSourceInformation>\r\n  </RunConfiguration>\r\n  <LoggerRunSettings>\r\n    <Loggers>\r\n      <Logger friendlyName=\"blame\" enabled=\"True\" />\r\n      <Logger friendlyName=\"Console\" uri=\"logger://microsoft/TestPlatform/ConsoleLogger/v1\" assemblyQualifiedName=\"Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" codeBase=\"C:\\Program Files\\dotnet\\sdk\\6.0.300-preview.22204.3\\vstest.console.dll\" enabled=\"True\" />\r\n    </Loggers>\r\n  </LoggerRunSettings>\r\n  <DataCollectionRunSettings>\r\n    <DataCollectors>\r\n      <DataCollector friendlyName=\"blame\" enabled=\"True\">\r\n        <Configuration>\r\n          <ResultsDirectory>D:\\MyWorks\\Assignment\\Cognizant\\Tests\\bin\\Debug\\net5.0\\fine-code-coverage\\coverage-tool-output</ResultsDirectory>\r\n        </Configuration>\r\n      </DataCollector>\r\n    </DataCollectors>\r\n  </DataCollectionRunSettings>\r\n</RunSettings>",
+  "TestExecutionContext": {
+    "FrequencyOfRunStatsChangeEvent": 10,
+    "RunStatsChangeEventTimeout": "00:00:01.5000000",
+    "InIsolation": false,
+    "KeepAlive": false,
+    "AreTestCaseLevelEventsRequired": false,
+    "IsDebug": false,
+    "TestCaseFilter": null,
+    "FilterOptions": null
+  },
+  "Package": null
+}
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.867, 7539791126671, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestExecutorPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestExecutor
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.869, 7539791147374, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.870, 7539791155227, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.870, 7539791157512, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.875, 7539791207727, testhost.dll, AssemblyResolver.ctor: Creating AssemblyResolver with searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.878, 7539791239933, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.878, 7539791243124, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.878, 7539791244003, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.879, 7539791244663, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.879, 7539791245932, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.880, 7539791264211, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.889, 7539791351239, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.visualstudio.dotnetcore.testadapter: Resolving assembly.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.889, 7539791353389, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.visualstudio.dotnetcore.testadapter: Searching in: 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.891, 7539791368418, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.visualstudio.dotnetcore.testadapter: Loading assembly 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.893, 7539791392853, testhost.dll, AssemblyResolver.OnResolve: Resolved assembly: xunit.runner.visualstudio.dotnetcore.testadapter, from path: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.901, 7539791472971, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.utility.netcoreapp10: Resolving assembly.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.902, 7539791474764, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.utility.netcoreapp10: Searching in: 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.902, 7539791479136, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.utility.netcoreapp10: Loading assembly 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.utility.netcoreapp10.dll'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.904, 7539791500304, testhost.dll, AssemblyResolver.OnResolve: Resolved assembly: xunit.runner.utility.netcoreapp10, from path: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.utility.netcoreapp10.dll
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:29.911, 7539791571594, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.914, 7539791601111, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.915, 7539791610250, testhost.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.915, 7539791611932, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.915, 7539791613272, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.916, 7539791614540, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.916, 7539791615640, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.921, 7539791672003, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestExecutorPluginInformation2 TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestExecutor2
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.922, 7539791677580, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.922, 7539791678774, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.922, 7539791679511, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.922, 7539791681960, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.922, 7539791682835, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.922, 7539791683742, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791684260, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791684794, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791685339, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791686251, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791692460, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791693383, testhost.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.923, 7539791694152, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.924, 7539791696230, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.924, 7539791696945, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.924, 7539791697451, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.934, 7539791797366, testhost.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Xunit.Runner.VisualStudio.VsTestRunner
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.934, 7539791801270, testhost.dll, TestExecutorExtensionManager: Loading executor Xunit.Runner.VisualStudio.VsTestRunner
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.934, 7539791802282, testhost.dll, TestExecutorService: Loaded the executors
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.936, 7539791819991, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestSettingsProviderPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ISettingsProvider
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.936, 7539791823301, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.936, 7539791824064, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791824584, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791826274, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791826965, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791827490, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791827957, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791828571, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791829095, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.937, 7539791829877, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.938, 7539791835939, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.938, 7539791836998, testhost.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.938, 7539791837583, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.938, 7539791838119, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.938, 7539791839021, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.938, 7539791839639, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:29.940, 7539791857568, testhost.dll, TestExecutorService: Loaded the settings providers
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.940, 7539791858964, testhost.dll, TestExecutorService: Loaded the extensions
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:29.941, 7539791868959, testhost.dll, TestRequestHandler.OnMessageReceived: Running job 'TestExecution.StartWithSources'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.096, 7539793419903, testhost.dll, TestDiscoveryManager: Discovering tests from sources D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\Tests.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.099, 7539793452320, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestDiscovererPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestDiscoverer
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793456070, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793457133, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793457913, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793459920, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793460936, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793461719, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793462436, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793463284, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.100, 7539793463946, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.101, 7539793465209, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.106, 7539793517107, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.106, 7539793519165, testhost.dll, TestPluginCache: Discoverers are 'Xunit.Runner.VisualStudio.VsTestRunner, xunit.runner.visualstudio.dotnetcore.testadapter, Version=2.4.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c'.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.106, 7539793520089, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.106, 7539793520805, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.106, 7539793521448, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.106, 7539793522015, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.122, 7539793680542, testhost.dll, PEReaderHelper.GetAssemblyType: Determined assemblyType:'Managed' for source: 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\Tests.dll'
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.137, 7539793824955, testhost.dll, BaseRunTests.RunTestInternalWithExecutors: Running tests for executor://xunit/VsTestRunner2/netcoreapp
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.162, 7539794074801, testhost.dll, [xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 5.0.15)
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.162, 7539794076936, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 5.0.15)"}}
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.761, 7539800067127, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.reporters.netcoreapp10: Resolving assembly.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.761, 7539800069511, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.reporters.netcoreapp10: Searching in: 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.762, 7539800074885, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.reporters.netcoreapp10: Loading assembly 'D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.reporters.netcoreapp10.dll'.
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.763, 7539800091300, testhost.dll, AssemblyResolver.OnResolve: Resolved assembly: xunit.runner.reporters.netcoreapp10, from path: D:\MyWorks\Assignment\Cognizant\Tests\bin\Debug\net5.0\fine-code-coverage\build-output\xunit.runner.reporters.netcoreapp10.dll
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.878, 7539801236728, testhost.dll, [xUnit.net 00:00:00.73]   Discovering: Tests
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.878, 7539801239069, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.73]   Discovering: Tests"}}
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:30.924, 7539801701271, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.930, 7539801763087, testhost.dll, [xUnit.net 00:00:00.79]   Discovered:  Tests
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.931, 7539801765209, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.79]   Discovered:  Tests"}}
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:30.934, 7539801799027, testhost.dll, [xUnit.net 00:00:00.79]   Starting:    Tests
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:30.934, 7539801801003, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.79]   Starting:    Tests"}}
+TpTrace Verbose: 0 : 38992, 14, 2022/05/22, 14:01:30.999, 7539802445291, testhost.dll, TestExecutionRecorder.RecordStart: Starting test: Tests.UnitTest1.Test1.
+TpTrace Verbose: 0 : 38992, 14, 2022/05/22, 14:01:31.043, 7539802889826, testhost.dll, TestExecutionRecorder.RecordResult: Received result for test: Tests.UnitTest1.Test1.
+TpTrace Verbose: 0 : 38992, 14, 2022/05/22, 14:01:31.071, 7539803172551, testhost.dll, TestExecutionRecorder.RecordEnd: test: Tests.UnitTest1.Test1 execution completed.
+TpTrace Warning: 0 : 38992, 14, 2022/05/22, 14:01:31.072, 7539803174844, testhost.dll, TestRunCache: InProgressTests is null
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:31.073, 7539803188211, testhost.dll, [xUnit.net 00:00:00.93]   Finished:    Tests
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:31.073, 7539803189940, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.93]   Finished:    Tests"}}
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:31.079, 7539803246087, testhost.dll, BaseRunTests.RunTestInternalWithExecutors: Completed running tests for executor://xunit/VsTestRunner2/netcoreapp
+TpTrace Information: 0 : 38992, 4, 2022/05/22, 14:01:31.084, 7539803297302, testhost.dll, Sending test run complete
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:31.140, 7539803862355, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestExecution.Completed","Payload":{"TestRunCompleteArgs":{"TestRunStatistics":{"ExecutedTests":1,"Stats":{"Passed":1}},"IsCanceled":false,"IsAborted":false,"Error":null,"AttachmentSets":[],"ElapsedTimeInRunningTests":"00:00:00.9533342","Metrics":{}},"LastRunTests":{"NewTestResults":[{"TestCase":{"Id":"d4833d70-3172-3830-509f-1962168890af","FullyQualifiedName":"Tests.UnitTest1.Test1","DisplayName":"Tests.UnitTest1.Test1","ExecutorUri":"executor://xunit/VsTestRunner2/netcoreapp","Source":"D:\\MyWorks\\Assignment\\Cognizant\\Tests\\bin\\Debug\\net5.0\\fine-code-coverage\\build-output\\Tests.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"Tests.UnitTest1.Test1","Messages":[],"ComputerName":"LPTNET064","Duration":"00:00:00.0034332","StartTime":"2022-05-22T11:01:31.0426061+00:00","EndTime":"2022-05-22T11:01:31.042713+00:00","Properties":[]}],"TestRunStatistics":{"ExecutedTests":1,"Stats":{"Passed":1}},"ActiveTests":[]},"RunAttachments":[],"ExecutorUris":["executor://xunit/VsTestRunner2/netcoreapp"]}}
+TpTrace Verbose: 0 : 38992, 4, 2022/05/22, 14:01:31.141, 7539803867013, testhost.dll, BaseRunTests.RunTests: Run is complete.
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803875153, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803877010, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (TestSession.Terminate) -> null
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803877545, testhost.dll, Session End message received from server. Closing the connection.
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803881278, testhost.dll, SocketClient.Stop: Stop communication from server endpoint: 127.0.0.1:064513
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803881882, testhost.dll, SocketClient: Stop: Cancellation requested. Stopping message loop.
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803883248, testhost.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:31.142, 7539803883847, testhost.dll, Closing the connection !
+TpTrace Information: 0 : 38992, 5, 2022/05/22, 14:01:31.143, 7539803886085, testhost.dll, SocketClient.PrivateStop: Stop communication from server endpoint: 127.0.0.1:064513, error:
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:31.143, 7539803894096, testhost.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Verbose: 0 : 38992, 5, 2022/05/22, 14:01:31.144, 7539803895142, testhost.dll, TcpClientExtensions.MessageLoopAsync: exiting MessageLoopAsync remoteEndPoint: [::ffff:127.0.0.1]:64513 localEndPoint: [::ffff:127.0.0.1]:64518
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:31.143, 7539803894064, testhost.dll, Closing the connection !
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:31.144, 7539803897403, testhost.dll, SocketClient.Stop: Stop communication from server endpoint: 127.0.0.1:064513
+TpTrace Verbose: 0 : 38992, 1, 2022/05/22, 14:01:31.144, 7539803897944, testhost.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 38992, 1, 2022/05/22, 14:01:31.144, 7539803899011, testhost.dll, Testhost process exiting.

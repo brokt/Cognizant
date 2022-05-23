@@ -1,0 +1,15 @@
+/.vs
+/packages
+BusinessLayer/bin
+BusinessLayer/obj
+Core/bin
+Core/obj
+DataLayer/bin
+DataLayer/obj
+Entities/bin
+Entities/obj
+Web/bin
+Web/obj
+Web.Api/bin
+Web.Api/obj
+Web.Api/appsettings.Development

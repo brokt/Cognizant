@@ -1,0 +1,269 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@Html.AntiForgeryToken()
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="filtering">
+    <form>
+
+        <div class="col-md-5">
+            Brand:<select class="js-data-example-ajax" id="brandName"></select>
+        </div>
+        
+        <button type="submit" id="LoadRecordsButton">Load records</button>
+
+    </form>
+</div>
+<div id="carList"></div>
+<style>
+    .select2.select2-container {
+        width: 100% !important;
+    }
+
+        .select2.select2-container .select2-selection {
+            border: 1px solid #ccc;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            height: 34px;
+            margin-bottom: 15px;
+            outline: none !important;
+            transition: all .15s ease-in-out;
+        }
+
+            .select2.select2-container .select2-selection .select2-selection__rendered {
+                color: #333;
+                line-height: 32px;
+                padding-right: 33px;
+            }
+
+            .select2.select2-container .select2-selection .select2-selection__arrow {
+                background: #f8f8f8;
+                border-left: 1px solid #ccc;
+                -webkit-border-radius: 0 3px 3px 0;
+                -moz-border-radius: 0 3px 3px 0;
+                border-radius: 0 3px 3px 0;
+                height: 32px;
+                width: 33px;
+            }
+
+        .select2.select2-container.select2-container--open .select2-selection.select2-selection--single {
+            background: #f8f8f8;
+        }
+
+            .select2.select2-container.select2-container--open .select2-selection.select2-selection--single .select2-selection__arrow {
+                -webkit-border-radius: 0 3px 0 0;
+                -moz-border-radius: 0 3px 0 0;
+                border-radius: 0 3px 0 0;
+            }
+
+        .select2.select2-container.select2-container--open .select2-selection.select2-selection--multiple {
+            border: 1px solid #34495e;
+        }
+
+        .select2.select2-container .select2-selection--multiple {
+            height: auto;
+            min-height: 34px;
+        }
+
+            .select2.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field {
+                margin-top: 0;
+                height: 32px;
+            }
+
+            .select2.select2-container .select2-selection--multiple .select2-selection__rendered {
+                display: block;
+                padding: 0 4px;
+                line-height: 29px;
+            }
+
+            .select2.select2-container .select2-selection--multiple .select2-selection__choice {
+                background-color: #f8f8f8;
+                border: 1px solid #ccc;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                margin: 4px 4px 0 0;
+                padding: 0 6px 0 22px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 12px;
+                position: relative;
+            }
+
+                .select2.select2-container .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 22px;
+                    width: 22px;
+                    margin: 0;
+                    text-align: center;
+                    color: #e74c3c;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+    .select2-container .select2-dropdown {
+        background: transparent;
+        border: none;
+        margin-top: -5px;
+    }
+
+        .select2-container .select2-dropdown .select2-search {
+            padding: 0;
+        }
+
+            .select2-container .select2-dropdown .select2-search input {
+                outline: none !important;
+                border: 1px solid #34495e !important;
+                border-bottom: none !important;
+                padding: 4px 6px !important;
+            }
+
+        .select2-container .select2-dropdown .select2-results {
+            padding: 0;
+        }
+
+            .select2-container .select2-dropdown .select2-results ul {
+                background: #fff;
+                border: 1px solid #34495e;
+            }
+
+                .select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+                    background-color: #3498db;
+                }
+</style>
+
+
+@section Scripts {
+    <script type="text/javascript">
+
+        function onDetail(id) {
+            debugger;
+            alert(id);
+            baseUrl = this.location.href.split('?')[0];
+            var detailUrl = baseUrl + 'detail?id=' + id;
+            window.open(detailUrl, '_blank');
+        }
+
+    $(document).ready(function () {
+
+        $.ajaxSetup({
+            beforeSend: function (request) {
+                request.setRequestHeader("RequestVerificationToken", $('input[name="__RequestVerificationToken"]').val());
+            },
+        });
+
+
+        var fields = {
+            _id: {title: 'Id',width: '8%' },
+            make: {  title: 'Brand',width: '21%' },
+            model: {  title: 'Model',width: '21%' },
+            year_model: {  title: 'Year Model',width: '21%'},
+            date_added: {
+                title: 'Date Added', width: '21%', type: 'date', displayFormat: 'dd.mm.yy', create: false, edit: false
+            },
+            Other: {
+                title: 'Other',
+                display: function (data) {
+                    console.log(data);
+                    if (data.record.licensed) {
+                        return '<button title="Edit" class="jtable-command-button jtable-edit-command-button" onclick="onDetail(' + data.record._id + '); return false;"><span>Edit</span></button>';
+                    }
+                   
+                },
+                create: false,
+                edit: false
+
+            }
+        }
+
+        var actions =  {
+            listAction: '/Index' + "?handler=Read",
+            actions: {
+                title: 'Actions',
+                width: '1%',
+                sorting: false,
+                create: false,
+                edit: false,
+                list: true,
+                display: function (data) {
+                    if (data.record) {
+                        // This if you want a custom edit action.
+                        return '<button title="Edit" class="jtable-command-button jtable-edit-command-button" onclick="onDetail(' + data.record.id + '); return false;"><span>Edit</span></button>';
+                    }
+                }
+            }
+            @*updateAction: '@Url.Action("UpdateCvInformation","CvInformation")',
+            createAction: '@Url.Action("CreateCvInformation","CvInformation")',
+            deleteAction: '@Url.Action("DeleteCvInformation","CvInformation")'*@
+        }
+
+
+        $.jqueryTable($("#carList"), "Car List", fields, actions,true,true);
+
+
+        $('#LoadRecordsButton').click(function (e) {
+            e.preventDefault();
+            $('#carList').jtable('load', {
+                brandName: $('#brandName').val()
+            });
+        });
+        $('.js-data-example-ajax').select2({
+            ajax: {
+                url: '/Index' + "?handler=GetBrands",
+                type:"POST",
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        type: 'public'
+                    }
+
+                    // Query parameters will be ?search=[term]&type=public
+                    return query;
+                }
+            }
+        });
+
+    
+    //    $('.js-data-example-ajax').select2({
+    //        ajax: {
+    //            type: "GET",
+    //            url: '/Index' + "?handler=GetBrands",
+    //            dataType: 'json',
+    //            contentType: "application/json; charset=utf-8",
+    //            data: function (params) {
+    //                var query =
+    //                {
+    //                    term: params.term,
+    //                };
+    //                return query;
+    //            },
+    //            processResults: function (data, page) {
+    //                debugger;
+    //                console.log(data);
+    //                // parse the results into the format expected by Select2.
+    //                // since we are using custom formatting functions we do not need to
+    //                // alter the remote JSON data
+
+    //                return {
+    //                    results: data.results,
+    //                    pagination: {
+    //                        more: data.more
+    //                    }
+    //                };
+    //                // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+    //            }
+    //        }
+    //    });
+    });
+
+    </script>
+}
