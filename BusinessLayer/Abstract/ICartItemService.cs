@@ -10,5 +10,7 @@ namespace BusinessLayer.Abstract
     public interface ICartItemService
     {
         Task<CartItem> Add(CartItem cartItem);
+        Task<List<CartItem>> GetCartList(int startIndex = 0, int count = 0);
+        Task<int> GetCountList();
     }
 }

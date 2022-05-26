@@ -34,6 +34,34 @@ namespace Entities.Migrations
                     b.ToTable("Cars");
                 });
 
+            modelBuilder.Entity("Entities.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UsersId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VehicleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsersId");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("CartItem");
+                });
+
             modelBuilder.Entity("Entities.Location", b =>
                 {
                     b.Property<int>("Id")
@@ -50,6 +78,36 @@ namespace Entities.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Locations");
+                });
+
+            modelBuilder.Entity("Entities.Users", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Entities.Vehicle", b =>
@@ -112,6 +170,23 @@ namespace Entities.Migrations
                     b.ToTable("WareHouses");
                 });
 
+            modelBuilder.Entity("Entities.CartItem", b =>
+                {
+                    b.HasOne("Entities.Users", "Users")
+                        .WithMany("CartItems")
+                        .HasForeignKey("UsersId");
+
+                    b.HasOne("Entities.Vehicle", "Vehicle")
+                        .WithMany("CartItems")
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Users");
+
+                    b.Navigation("Vehicle");
+                });
+
             modelBuilder.Entity("Entities.Vehicle", b =>
                 {
                     b.HasOne("Entities.Cars", "Cars")
@@ -152,6 +227,16 @@ namespace Entities.Migrations
             modelBuilder.Entity("Entities.Location", b =>
                 {
                     b.Navigation("WareHouses");
+                });
+
+            modelBuilder.Entity("Entities.Users", b =>
+                {
+                    b.Navigation("CartItems");
+                });
+
+            modelBuilder.Entity("Entities.Vehicle", b =>
+                {
+                    b.Navigation("CartItems");
                 });
 #pragma warning restore 612, 618
         }

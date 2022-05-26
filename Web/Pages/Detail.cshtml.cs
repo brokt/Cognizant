@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.DataAccess;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,25 +14,28 @@ namespace Web.Pages
     {
         private readonly IVehicleApi _vehicleApi;
         private readonly ICartItemApi _cartItemApi;
+        private readonly IRefitApiRepository _refitApiRepository;
 
         [BindProperty]
         public Vehicle Vehicle { get; set; }
-        public DetailModel(IVehicleApi vehicleApi,ICartItemApi cartItemApi)
+        public DetailModel(IVehicleApi vehicleApi, IRefitApiRepository refitApiRepository)
         {
             _vehicleApi = vehicleApi;
-            _cartItemApi = cartItemApi;
+            _refitApiRepository = refitApiRepository;
         }
         public async Task OnGetAsync(int id)
         {
             Vehicle = await _vehicleApi.GetById(id);
         } 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            _cartItemApi.Add(new CartItem()
+            var result = await _refitApiRepository.GetClientService<ICartItemApi>().Add(new CartItem()
             {
                 VehicleId = Vehicle.Id,
                 Quantity = 1
             });
+            
+            Vehicle = await _vehicleApi.GetById(result.VehicleId);
             return Page();
             //Vehicle = await _vehicleApi.GetById(id);
         }

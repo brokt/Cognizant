@@ -40,12 +40,12 @@ namespace BusinessLayer.Test.Services
         }
 
         [TestMethod]
-        [DataRow(4)]
+        [DataRow(13)]
         public async Task DeleteAsync(int id)
         {
             var detail = await _vehicleService.GetById(id);
             _vehicleService.Delete(detail);
-            var res = _vehicleService.GetById(id);
+            var res = await _vehicleService.GetById(id);
             Assert.IsNull(res);
         }
 
@@ -70,7 +70,7 @@ namespace BusinessLayer.Test.Services
             Assert.AreEqual(brandList > 0, true);            
         }
         [TestMethod]
-        public async Task GetListAsync()
+        public async Task Get_List()
         {
             var list = await _vehicleService.GetList();
             Assert.AreEqual(list.Any(), true);

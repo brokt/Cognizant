@@ -238,6 +238,18 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.18.0, )"
+            },
             "Refit": {
               "target": "Package",
               "version": "[6.3.2, )"
@@ -245,6 +257,14 @@
             "Refit.Newtonsoft.Json": {
               "target": "Package",
               "version": "[6.3.2, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.18.0, )"
             }
           },
           "imports": [

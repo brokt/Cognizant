@@ -1,6 +1,9 @@
+using Core.DataAccess;
+using Core.DataAccess.RefitApi;
 using Core.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
@@ -29,14 +32,17 @@ namespace Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages().AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver()); ;
+            services.AddRazorPages().AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+            services.AddSession();
             //services.AddRazorPages();
             var settings = new RefitSettings();
             services.AddRefitClient<IVehicleApi>(RefitExtensions.GetNewtonsoftJsonRefitSettings())
                        .ConfigureHttpClient(c => c.BaseAddress = new Uri(Configuration.GetSection("RefitClientUrl").Value));
-            services.AddRefitClient<ICartItemApi>(RefitExtensions.GetNewtonsoftJsonRefitSettings())
+            
+            services.AddRefitClient<IUsersApi>(RefitExtensions.GetNewtonsoftJsonRefitSettings())
                        .ConfigureHttpClient(c => c.BaseAddress = new Uri(Configuration.GetSection("RefitClientUrl").Value));
-            //services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IRefitApiRepository, RefitApiRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +58,7 @@ namespace Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

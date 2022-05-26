@@ -1,6 +1,9 @@
 ﻿@page
 @model Web.Pages.DetailModel
 
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
 <style>
 
     .container {
@@ -220,10 +223,27 @@
                     <div class="col-12 px-0">
                         <div class="row m-0">
                             <div class="col-12  mb-4 p-0">
-                                <div class="btn btn-primary">
-                                    Add to Cart<span class="fas fa-arrow-right ps-2"></span>
-                                </div>
-                                <button class="btn btn-primary fas fa-arrow-right ps-2" onclick="saveEntity()">Kaydet</button>
+                                @*@{
+           var ss = sd.Session.Keys.ToList();
+        }*@
+
+                                @{
+                                    var token = @HttpContextAccessor.HttpContext.Session.GetString("Token");
+
+
+                                }
+                                @if (!string.IsNullOrEmpty(token))
+                                {
+                                    <button class="btn btn-primary fas fa-arrow-right ps-2" onclick="saveEntity()">Add to Cart</button>
+                                }
+                                else
+                                {
+                                    <div class="alert alert-danger" role="alert">
+                                        You Must be loging to Add to Cart!
+                                    </div>
+                                }
+
+
                             </div>
                         </div>
                     </div>

@@ -28,6 +28,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/CartList">Cart List</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,6 +63,8 @@
 
     <script src="~/js/customs/customJqueryDataTable.js" type="text/javascript"></script>
 
+    <script src="~/lib/jTable2/jquery.jtable.footer.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
